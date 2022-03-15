@@ -22,7 +22,7 @@ range[Symbol.iterator] = function() {
 
 };
 
-// теперь работает!
+
 for (let num of range) {
   alert(num);
 }
