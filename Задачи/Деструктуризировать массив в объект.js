@@ -1,10 +1,10 @@
 let obj={}
-function destruct(arr) {
+function destruct(arr,obj) {
     for(let i=0;i<arr.length;i++){
       let ind=arr[0+i]
       obj[i]=ind;
     }
-    console.log(obj.keys());
-    return obj
+    console.log(Object.keys(obj));
+    
   }
-  destruct(['one','two'])
+  destruct(['one','two'],obj)
