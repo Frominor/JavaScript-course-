@@ -1,0 +1,13 @@
+function func(n) {
+  return n
+}
+function decorator(func,r,operation) {
+  return function (n) {
+    if(operation=="-")return n-r
+    if(operation=="+")return n+r
+    if(operation=="/")return n/r
+    if(operation=="*")return n*r
+  }
+}
+func=decorator(func,2,"-")
+alert(func(4))
