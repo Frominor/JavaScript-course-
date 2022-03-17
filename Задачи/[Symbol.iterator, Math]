@@ -1,8 +1,6 @@
 let range = {
     from: 2,
-  };
-  
-  
+  }; 
   range[Symbol.iterator] = function() {
     return {
       current: this.from,
@@ -17,12 +15,9 @@ let range = {
           return { done: true, };
         }
       }
-  
     };
-  
   };
   
-  // теперь работает!
   for (let num of range) {
     alert(num);
   }
