@@ -1,20 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link href="style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="C:\Users\Admin\Desktop\Новая папка\script.js"></script>
-
-<title>Применение информационных технологий в современной медицине</title>
-<style>
+    <style>
+     
 
 
-</style>
+
+    </style>
+
+
 </head>
-<body>
-<div id="like_button_container"></div>
+<body >
+    Привет
+     <!-- Комментарий -->
+    <div></div>
+    <div class="ddiv"></div>
+    <div id="zxc"></div>
+    <a></a>
 
+
+
+
+
+
+
+
+
+   
+<script>
+ let elem1=document.querySelector('div')//будет найдет элемен div
+ let elem2=document.querySelector('.ddiv')//будет найдет элемент по имени класса
+ let elem3=document.getElementById('zxc')//найдет элемент по id
+ let elem4=document.querySelectorAll('div')//вернет коллекцию найденных элементов
+ let elem5=document.getElementsByTagName('a')//найдет эелмент по названию тэга
+ ///////////Навигация
+ let elem6=document.body.childNodes
+ console.log(elem6)//вернет все дочерние узлы объекта body
+ let elem7=document.body.firstChild/
+ console.log(elem7)//вернет первый дочерний узел
+ let elem8=document.body.lastChild
+ console.log(elem8)//вернет последний дочерний узел
+let elem9=document.body.firstElementChild;
+console.log(elem9)//вернет именно элемент-узел
+let  elem10=document.body.lastElementChild
+console.log(elem10)//по аналогии с firstElementChild
+let elem11=document.body.parentElement
+console.log(elem11)//вернет родительский узел-элемент -HTML
+let elem12=document.body.previousElementSibling
+console.log(elem12)//вернет предыдуший дочерний элемент родителя
+let elem13=document.body.nextElementSibling
+console.log(elem13)//вернет последующий дочерний элемент родителя
+////Изменение элментов
+let elem14=document.body.nodeName
+console.log(elem14)//вернет BODY
+let elem15=document.body.tagName
+console.log(elem15)//вернет BODY РАЗЛИЧИЕ МЕЖДУ tag.name и node.name в том,что tagname есть только у узлов-элментов,а nodename-у всех
+let elem16=document.body;
+elem16=elem16.innerHTML='Лалалалалала'//мы поменяли содержимое внутри body 
+console.log(elem16)
+let elem17=document.body
+elem17=elem17.outerHTML="Я изменил даже тэги" //то есть я именил элемент целиком
+console.log(elem17)
+let elem18 = document.body.firstChild;
+    console.log(elem18.data); // Привет
+    let elem19 = elem18.nextSibling;
+    console.log(elem19.data); // Комментарий
+console.log(zxc.textContent)//выведет элемент как он есть,то есть с тэгами
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<script src="script.js">
+</script>
 
 </body>
 
