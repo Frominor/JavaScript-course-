@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+  
+      </style>
+
+
+</head>
+<body >
+  
+<script>
+  let elem=document.documentElement;//получил в переменную  область,на которой будем работать-все окно браузера
+     elem.addEventListener('mousemove',info)//поставил обработчик
+        function info(event){//создал функию,которая будет считать координаты
+           elem.innerHTML=`Координата по иксу- ${event.pageX} <br> Координата по игрику-${event.pageY}`//указала координаты по X и по Y
+  }
+</script>
+ 
+<script src="script.js">
+</script>
+
+</body>
+
+</html>
