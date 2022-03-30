@@ -12,44 +12,48 @@
              display: inline-block;
               position: relative; 
                 left: 39%;
-                 top: 300px; 
-         };
-        
+                 top: 300px; }
+
 body{
   position: relative;
     height: 1000px;
      color:black
 }
 </style>
+
+
 </head>
 <body >
-  <div id="cont">
-    <span id="inside"></span>
-      <span id="inside-1"></span>
+  <div id = "cont">
+    <span id = "inside"></span>
+      <span id = "inside-1"></span>
   </div>
+
+  
 <script>
-let div=document.getElementById('cont')
-  let span=document.getElementById('inside')
-   let span2=document.getElementById('inside-1')
-    div.addEventListener('mouseover',over)
-      function over(event){
-        div.addEventListener('mousemove',move)
-          function move(event){
-              span.innerHTML=event.offsetY+ 'px'
-                span.style.color='red'
-                  span2.style.marginTop=event.offsetY+ 'px'
-                    span2.style.position='absolute'
-                      span2.innerHTML=event.offsetX + 'px'+ " " + event.offsetY + 'px'
-                          span2.style.left=10+ 'px'
-                          span2.style.marginLeft=event.offsetX + 'px'
+let div = document.getElementById('cont')
+  let span = document.getElementById('inside')
+   let span2 = document.getElementById('inside-1')
+    div.addEventListener('mouseover', over)
+      function over(event) {
+        div.addEventListener('mousemove', move)
+          function move(event) {
+              span.innerHTML = event.offsetY+ 'px';
+                span.style.color = 'red';
+                  span2.style.marginTop = event.offsetY+ 'px';
+                    span2.style.position='absolute';
+                      span2.innerHTML = event.offsetX + 'px'+ " " + event.offsetY + 'px';
+                          span2.style.left = 10 + 'px';
+                          span2.style.marginLeft = event.offsetX + 'px';
                                 }
                                     }
-                                    div.addEventListener('mouseout',out)
-                                      function out(event){
-                                        span2.innerHTML=" "
-                                         }
+                                    div.addEventListener('mouseout', out)
+                                      function out(event) {
+                                        span2.innerHTML = " ";
+                                         };
 
 </script>
+ 
 <script src="script.js">
 </script>
 
