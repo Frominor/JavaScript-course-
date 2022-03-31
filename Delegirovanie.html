@@ -64,15 +64,15 @@ function change(event) {
  },9000);
  return
  };
-if (event.target.closest('.second-child')){
+if (event.target.closest('.second-child')) {
 
   let second = document.querySelector('.second-child')
   second.style.backgroundColor = 'red';
-  setTimeout(function(){
+  setTimeout(function() {
   second.style.backgroundColor = 'white';
   second.parentElement.style.backgroundColor = 'red';
   },3000);
-  setTimeout(function(){
+  setTimeout(function() {
   second.parentElement.style.backgroundColor = 'white';
   },5000);
   return 
@@ -81,7 +81,7 @@ if (event.target.closest('.second-child')){
 
   let first = document.querySelector('.first-child')
   first.style.backgroundColor = 'red';
-  setTimeout(function(){
+  setTimeout(function() {
     first.style.backgroundColor = 'white';
   },3000);
  };
