@@ -1,0 +1,44 @@
+let thirst=document.querySelector('.thirst-child')
+thirst.addEventListener('click', click)
+function click(event){
+ console.log('Последний элемент отработал')
+  setTimeout(function(){
+  thirst.style.backgroundColor='purple'
+},2000)
+setTimeout(function(){
+  thirst.style.backgroundColor='brown'
+},3000)
+
+
+}
+let second=document.querySelector('.second-child')
+second.addEventListener('click',func)
+function func(event){
+ console.log("Второй элемент отработал")
+  setTimeout(function(){
+  second.style.backgroundColor='black'
+},4000)
+setTimeout(function(){
+  second.style.backgroundColor='yellow'
+},5000)
+}
+let firtst=document.querySelector('.first-child')
+firtst.addEventListener('click',onemoreclick)
+function onemoreclick(){
+  setTimeout(function(){
+    firtst.style.backgroundColor='white'
+  },6000)
+  setTimeout(function(){
+    firtst.style.backgroundColor='blue'
+  },7000)
+}
+let main=document.querySelector('.main')
+main.addEventListener('click',clickk)
+function clickk(){
+  setTimeout(function(){
+    main.style.backgroundColor='pink'
+  },8000)
+  setTimeout(function(){
+    main.style.backgroundColor='red'
+  },9000)
+}
