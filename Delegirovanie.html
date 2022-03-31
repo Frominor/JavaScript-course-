@@ -68,9 +68,9 @@ if (event.target.closest('.second-child')) {
 
   let second = document.querySelector('.second-child')
   second.style.backgroundColor = 'red';
-  setTimeout(function() {
-   second.style.backgroundColor = 'white';
-   second.parentElement.style.backgroundColor = 'red';
+   setTimeout(function() {
+    second.style.backgroundColor = 'white';
+    second.parentElement.style.backgroundColor = 'red';
   },3000);
   setTimeout(function() {
    second.parentElement.style.backgroundColor = 'white';
