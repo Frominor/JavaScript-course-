@@ -44,12 +44,12 @@
 </div>
   
 <script>
-let div = document.querySelector('.main')
-div.addEventListener('click', change)
+let div = document.querySelector('.main');
+div.addEventListener('click', change);
 function change(event) {
   if (event.target.closest('.thirst-child')) {
 
-  let thirst = document.querySelector('.thirst-child')
+  let thirst = document.querySelector('.thirst-child');
    thirst.style.backgroundColor = 'red';
    setTimeout(function() {
     thirst.style.backgroundColor = 'white';
