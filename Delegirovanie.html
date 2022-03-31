@@ -52,8 +52,8 @@ function change(event) {
   let thirst = document.querySelector('.thirst-child')
    thirst.style.backgroundColor = 'red';
    setTimeout(function() {
-  thirst.style.backgroundColor = 'white';
-  thirst.parentElement.style.backgroundColor = 'red';
+    thirst.style.backgroundColor = 'white';
+    thirst.parentElement.style.backgroundColor = 'red';
 },3000);
  setTimeout(function() {
   thirst.parentElement.style.backgroundColor = 'white';
@@ -69,11 +69,11 @@ if (event.target.closest('.second-child')) {
   let second = document.querySelector('.second-child')
   second.style.backgroundColor = 'red';
   setTimeout(function() {
-  second.style.backgroundColor = 'white';
-  second.parentElement.style.backgroundColor = 'red';
+   second.style.backgroundColor = 'white';
+   second.parentElement.style.backgroundColor = 'red';
   },3000);
   setTimeout(function() {
-  second.parentElement.style.backgroundColor = 'white';
+   second.parentElement.style.backgroundColor = 'white';
   },5000);
   return 
 };
