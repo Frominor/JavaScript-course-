@@ -32,6 +32,7 @@ let div = document.getElementById('cont');
 let span = document.getElementById('inside');
 let span2 = document.getElementById('inside-1');
 div.addEventListener('mouseover', over);
+    
 function over(event) {
   div.addEventListener('mousemove', move);
   function move(event) {
@@ -40,9 +41,11 @@ function over(event) {
    span2.innerHTML = event.offsetX + 'px' + " " + event.offsetY + 'px';
    span2.style.left = 10 + 'px';
    span2.style.marginLeft = event.offsetX + 'px';
-   };
     };
+ };
+    
 div.addEventListener('mouseout', out)
+    
 function out(event) {
   span2.innerHTML = " ";
 };
