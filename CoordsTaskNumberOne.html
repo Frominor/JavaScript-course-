@@ -2,98 +2,56 @@
 <html>
 <head>
     <style>
-      body{
-        margin: 0;
-        padding: 0;
-      }
-  div{
-    background-color: red;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .first-child{
-    width: 100px;
-    height: 100px;
-    background-color:white;
-  }
-  .second-child{
-    width: 80px;
-    height: 80px;
-    background-color: white;
-  }
-  .thirst-child{
-    width: 60px;
-    height: 60px;
-    background-color: white;
-  }
-  
+  #cont{
+margin: 0 auto;
+background-color: red;
+z-index: 3; 
+width: 500px;
+height: 500px;
+margin:  0 auto;
+display: inline-block;
+position: relative; 
+left: 35%;
+top: 200px; }
+
+body{
+position: relative;
+height: 1000px;
+color:black
+}
 </style>
 
 </head>
 
 <body>
-<div class="main">
- <div class="first-child">
-   <div class="second-child"> 
-    <div class="thirst-child"></div>
-   </div>
- </div>
-</div>
+  <div id = "cont">
+      <span id = "inside-1"></span>
+  </div>
   
 <script>
-let div = document.querySelector('.main')
-div.addEventListener('click', change)
-function change(event) {
-  if (event.target.closest('.thirst-child')) {
-
-  let thirst = document.querySelector('.thirst-child')
-   thirst.style.backgroundColor = 'red';
-   setTimeout(function() {
-  thirst.style.backgroundColor = 'white';
-  thirst.parentElement.style.backgroundColor = 'red';
-},3000);
- setTimeout(function() {
-  thirst.parentElement.style.backgroundColor = 'white';
-  thirst.parentElement.parentElement.style.backgroundColor = 'red';
-},6000);
- setTimeout(function() {
-  thirst.parentElement.parentElement.style.backgroundColor = 'white';
- },9000);
-
- return
- };
-if (event.target.closest('.second-child')){
-
-  let second = document.querySelector('.second-child')
-  second.style.backgroundColor = 'red';
-  setTimeout(function(){
-  second.style.backgroundColor = 'white';
-  second.parentElement.style.backgroundColor = 'red';
-  },3000);
-  setTimeout(function(){
-  second.parentElement.style.backgroundColor = 'white';
-  },5000);
-
-  return 
+let div = document.getElementById('cont');
+let span = document.getElementById('inside');
+let span2 = document.getElementById('inside-1');
+div.addEventListener('mouseover', over);
+function over(event) {
+  div.addEventListener('mousemove', move);
+  function move(event) {
+   span2.style.marginTop = event.offsetY+ 'px';
+   span2.style.position='absolute';
+   span2.innerHTML = event.offsetX + 'px'+ " " + event.offsetY + 'px';
+   span2.style.left = 10 + 'px';
+   span2.style.marginLeft = event.offsetX + 'px';
+   };
+    };
+div.addEventListener('mouseout', out)
+function out(event) {
+  span2.innerHTML = " ";
 };
- if (event.target.closest('.first-child')) {
-
-  let first = document.querySelector('.first-child')
-  first.style.backgroundColor = 'red';
-  setTimeout(function(){
-    first.style.backgroundColor = 'white';
-  },3000);
- };
-};
-
 
 </script>
  
-<script src="script.js">
-</script>
+<script src="script.js"></script>
+
 
 </body>
 
