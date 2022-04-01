@@ -35,6 +35,7 @@ div.addEventListener('mouseover', over);
     
 function over(event) {
   div.addEventListener('mousemove', move);
+    
   function move(event) {
    span2.style.marginTop = event.offsetY + 'px';
    span2.style.position = 'absolute';
