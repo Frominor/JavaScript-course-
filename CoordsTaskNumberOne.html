@@ -29,14 +29,11 @@ color:black
   
 <script>
 let div = document.getElementById('cont');
-let span = document.getElementById('inside');
 let span2 = document.getElementById('inside-1');
-div.addEventListener('mouseover', over);
-    
-function over(event) {
-  div.addEventListener('mousemove', move);
-    
-  function move(event) {
+document.body.addEventListener('mousemove',click)
+ 
+function click(event){
+  if(event.target.closest('#cont')){
    span2.style.marginTop = event.offsetY + 'px';
    span2.style.position = 'absolute';
    span2.innerHTML = event.offsetX + 'px' + " " + event.offsetY + 'px';
