@@ -24,28 +24,34 @@ color:black
 
 <body>
   <div id = "cont">
-      <span id = "inside-1"></span>
   </div>
+  <span id = "inside-1"></span>
   
 <script>
 let div = document.getElementById('cont');
 let span2 = document.getElementById('inside-1');
-document.body.addEventListener('mousemove',click)
- 
-function click(event){
-  if(event.target.closest('#cont')){
-   span2.style.marginTop = event.offsetY + 'px';
+document.body.addEventListener('mousemove',click);
+span2.style.top=0+'px';
+ span2.style.zIndex=3;
+ div.style.zIndex=1;
+function click(event) {
+    
+  if (event.target.closest('#cont')) {
+   span2.style.top = event.offsetY + 'px';
    span2.style.position = 'absolute';
    span2.innerHTML = event.offsetX + 'px' + " " + event.offsetY + 'px';
-   span2.style.left = 10 + 'px';
+   span2.style.marginLeft=220+'px';
    span2.style.marginLeft = event.offsetX + 'px';
+   span2.style.marginTop=200+'px';
   };
 };
     
-div.addEventListener('mouseout', out)
+document.addEventListener('mouseout', out);
     
 function out(event) {
-  span2.innerHTML = " ";
+    if(event.target!=span2) {
+        span2.innerHTML = " "; 
+    }; 
 };
 
 </script>
